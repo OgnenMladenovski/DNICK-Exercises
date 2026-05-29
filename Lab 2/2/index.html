@@ -2,9 +2,227 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bootstrap Lab2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/Bootstrap/bootstrap.css">
+
+    <style>
+        .image-background{
+            background-image: url("Images/wallpaper_suitcase.webp");
+            width: 100%;
+            height: 600px;
+            background-repeat: no-repeatx;
+        }
+        .tall{
+            width: 100%;
+            height: 400px;
+        }
+        .tall2{
+            width: 100%;
+            height: 300px;
+        }
+    </style>
 </head>
 <body>
+<!--NAV BAR-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <h2 class="p-2 fw-bold">WanderMK</h2>
+        </div>
 
+        <div class="col-6">
+
+        </div>
+
+        <div class="col-1 ps-5 mt-2">
+            <p class="p-2 fw-bold">Home</p>
+        </div>
+
+        <div class="col-1 ps-5 mt-2">
+            <p class="p-2 text-secondary">Tours</p>
+        </div>
+
+        <div class="col-1 ps-5 mt-2">
+            <p class="p-2 text-secondary">Comments</p>
+        </div>
+
+        <div class="col-1 ps-5 mt-2">
+            <p class="p-2 text-secondary">Contact</p>
+        </div>
+    </div>
+</div>
+
+<!--HEADER-->
+<div class="container-fluid image-background">
+    <div class="row row-cols-2 h-100">
+        <div class="col px-5 d-flex flex-column align-items-start justify-content-center">
+            <h1 class="text-white fw-bold ">Your next adventure starts here</h1>
+            <p class="text-white">Innovative tours, authentic experiences and expert support that makes a
+                difference.</p>
+            <div>
+                <button class="btn btn-light">Explore Tours</button>
+                <button class="btn btn-outline-light fw-bold">Contact Us</button>
+            </div>
+        </div>
+
+        <div class="col p-5 d-flex align-items-center">
+            <img src="Images/messy_desk.webp" class="">
+        </div>
+    </div>
+</div>
+
+<!--CARDS-->
+<div class="container-fluid py-5">
+    <div class="text-center">
+        <h1 class="fw-bold">Our Tours</h1>
+        <p class="fw-bold">_______</p>
+    </div>
+    <div class="row">
+        <div class="col-1">
+
+        </div>
+
+        <div class="col">
+            <div class="card" style="width: 25rem;">
+                <img src="Images/santorini.webp" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Greece - Santorini</h5>
+                    <p class="card-text">7 nights on the most romantic island. Accommodation, transport and guide.</p>
+                    <p class="text-warning fw-bold">from €450 / person</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card" style="width: 25rem;">
+                <img src="Images/rome.webp" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Italy - Rome & Tuscany</h5>
+                    <p class="card-text">10 nights through history. The Colosseum, Vatican and the Tuscan hills.</p>
+                    <p class="text-warning fw-bold">from €620 / person</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card" style="width: 25rem;">
+                <img src="Images/istanbul.webp" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Turkey - Istanbul</h5>
+                    <p class="card-text">5 nights in the heart of Istanbul. Hagia Sophia, bazaars and a Bosphorus
+                        cruise.</p>
+                    <p class="text-warning fw-bold">from €320 / person</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--REVIEWS-->
+<div class="container-fluid bg-success-subtle tall py-5">
+    <div class="text-center">
+        <h1 class="fw-bold">What Travelers Say</h1>
+        <p class="fw-bold">____________</p>
+    </div>
+
+    <div class="row">
+        <div class="col-1">
+
+        </div>
+
+        <div class="col py-5">
+            <div class="border-start border-warning border-5">
+                <p class="ps-4 text-success"><i>"The best trip of my life! The organization was perfect, the guide was
+                    fantastic."</i></p>
+            </div>
+            <p class="fw-bold">- Marija Kostovska</p>
+        </div>
+
+        <div class="col py-5">
+            <div class="border-start border-warning border-5">
+                <p class="ps-4 text-success"><i>"Greece was a dream! Everything was planned to the last detail, we had
+                    no worries."</i></p>
+            </div>
+            <p class="fw-bold">- Tone Ilievski</p>
+        </div>
+
+        <div class="col py-5">
+            <div class="border-start border-warning border-5">
+                <p class="ps-4 text-success"><i>"Very friendly team and excellent communication. I will return for
+                    another trip!"</i></p>
+            </div>
+            <p class="fw-bold">- Elena Ristovska</p>
+        </div>
+    </div>
+</div>
+
+<!--CONTACT-->
+<div class="container-fluid py-5">
+    <div class="text-center">
+        <h1 class="fw-bold">Contact Us</h1>
+        <p class="fw-bold">__________</p>
+    </div>
+
+    <div class="container-md">
+        <form class="row g-2">
+            <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="name@example.com">
+            </div>
+            <div class="col-6">
+                <label class="form-label">Phone</label>
+                <input type="text" class="form-control" placeholder="+389 70 123 456">
+            </div>
+            <div class="col-6">
+                <label class="form-label">Destination</label>
+                <select class="form-select">
+                    <option selected>Select destination...</option>
+                    <option value="1">Greece</option>
+                    <option value="2">Italy</option>
+                    <option value="3">Turkey</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" placeholder="Your message..."></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-success px-4">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--FOOTER-->
+<div class="container-fluid bg-success tall2 py-5">
+    <div class="row row-cols-3 d-flex flex-row justify-content-evenly">
+        <div class="col ps-5">
+            <h3 class="fw-bold text-light">✈️WanderMK</h3>
+            <p class="text-light">Authentic travel experiences since 2010. Every journey tells a story.</p>
+        </div>
+
+        <div class="col ps-5">
+            <h4 class="fw-bold text-light">Quick Links</h4>
+            <p class="text-light">Home</p>
+            <p class="text-light">Tours</p>
+            <p class="text-light">Comments</p>
+            <p class="text-light">Contact</p>
+        </div>
+
+        <div class="col ps-5">
+            <h4 class="fw-bold text-light">Contact US</h4>
+            <p class="text-light">📍Partizanski blvd. 15, Skopje</p>
+            <p class="text-light">📞+389 2 321 654</p>
+            <p class="text-light">️️✉️info@wandermk.mk</p>
+        </div>
+    </div>
+</div>
+
+<script src="/Bootstrap/bootstrap.js"></script>
 </body>
 </html>
