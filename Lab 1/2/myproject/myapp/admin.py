@@ -3,20 +3,21 @@ from .models import *
 
 # Register your models here.
 
-@admin.register(Instructor)
-class InstructorAdmin(admin.ModelAdmin):
-    list_display = ['name', 'surname', 'experience']
+@admin.register(Company)
+class CompanyAdmin(admin.ModelAdmin):
+    list_display = ['type', 'name', 'date']
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['name', 'description', 'availability']
+    list_display = ['name', 'description', 'is_active']
 
-@admin.register(Training)
-class TrainingAdmin(admin.ModelAdmin):
-    list_display = ['name', 'instructor', 'user', 'category', 'price', 'available_spots']
+@admin.register(Supplement)
+class SupplementAdmin(admin.ModelAdmin):
+    list_display = ['name', 'production_company', 'user', 'category']
     exclude = ['user']
 
     def save_model(self, request, obj, form, change):
         if not change or obj.user_id is None:
             obj.user = request.user
         return super().save_model(request, obj, form, change)
+#tuka
