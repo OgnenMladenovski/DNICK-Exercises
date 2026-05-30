@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="/index/" class="btn btn-outline-secondary btn-sm mb-3">Назад</a>
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+        <h2>{{ movie.title }}</h2>
+        <p class="text-muted">{{ movie.IMDB }}</p>
+        <p><strong>Изработен во:</strong> {{ movie.release_year }}</p>
+        <p><strong>Изработен од:</strong> {{ movie.production_house }}</p>
+        <p><strong>Времертаење:</strong> {{ movie.duration_minutes }}</p>
+        <p><strong>Жанр:</strong> {{ movie.genre }}</p>
+        <p><strong>Тип:</strong> {{ movie.type }}</p>
+        <p><strong>Цена:</strong> {{ movie.price }} ден.</p>
+    </div>
+</div>
+{% endblock %}
