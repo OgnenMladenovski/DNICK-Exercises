@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row row-cols-2 row-cols-md-4 g-3">
+    {% for training in trainings %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title">{{ training.title }}</h6>
+                <img src="{{ training.image.url }}">
+                <p><strong>{{ training.price }} ден.</strong></p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

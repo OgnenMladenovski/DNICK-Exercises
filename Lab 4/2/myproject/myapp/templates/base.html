@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FitZone</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark px-4">
+        <a class="navbar-brand" href="/index/">FitZone</a>
+        <div>
+            <a href="/index/" class="btn btn-outline-light btn-sm">Сите тренинзи</a>
+            <a href="/trainings/add/" class="btn btn-warning btn-sm">Додај тренинг</a>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
