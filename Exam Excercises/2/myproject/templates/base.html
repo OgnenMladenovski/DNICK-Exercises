@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>
+
+<div class="container-fluid">
+
+    <div class="row d-flex flex-row">
+
+        <div class="col-2">
+            <div class="border border-dark border-5 rounded p-3 m">
+                <p class="text-secondary fw-bold">DNIChK TRAVEL</p>
+            </div>
+        </div>
+
+        <div class="col-7">
+
+        </div>
+
+        <div class="col-3 g-4">
+            <a href="#" class="text-dark">Service</a>
+            <a href="#" class="text-dark ps-3">Destination</a>
+            <a href="{% url 'add_tour' %}" class="text-dark ps-3">Booking</a>
+            <a href="#" class="text-dark ps-3">Testimonial</a>
+            <a href="#" class="border border-dark rounded ps-3">Login</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container-fluid">
+    {% block content %} {% endblock %}
+</div>
+
+</body>
+</html>

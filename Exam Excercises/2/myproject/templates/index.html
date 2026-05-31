@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-md text-center pt-5">
+    <h6>Top Selling</h6>
+    <h1>Top Destinations</h1>
+</div>
+
+<div class="container-fluid pt-5">
+    <div class="row row-cols-3 ps-5">
+        {% for tour in tours %}
+        <div class="col">
+            <div class="card" style="width: 22rem;">
+                {% if tour.image %}
+                <img src="{{ tour.image.url }}" class="card-img-top" alt="...">
+                {% endif %}
+                <div class="card-body">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <h5 class="card-title">{{ tour.destination }}</h5>
+                        </div>
+                        <div class="col">
+                            <p class="text-end">${{ tour.price }}</p>
+                        </div>
+                    </div>
+                    <p>{{ tour.duration }} Days Trip</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
