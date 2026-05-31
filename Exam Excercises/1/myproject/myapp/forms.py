@@ -1,0 +1,7 @@
+from django import forms
+from .models import *
+
+class EventForm(forms.ModelForm):
+    class Meta:
+        model = Event
+        fields = ['name', 'date_time', 'poster', 'is_outside']
