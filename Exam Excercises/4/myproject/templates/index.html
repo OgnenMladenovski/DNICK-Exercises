@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="mb-4">Изложби</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for ex in exhibitions %}
+    <div class="col">
+        <div class="card h-100">
+            {% if ex.image %}
+                <img src="{{ ex.image.url }}" class="card-img-top" alt="{{ ex.title }}" style="height:220px; object-fit:cover;">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ ex.title }}</h5>
+                <p class="card-text">{{ ex.description }}</p>
+                <p class="card-text"><small class="text-muted">{{ ex.location }}</small></p>
+                <p class="card-text"><small>{{ ex.date_start }} – {{ ex.date_end }}</small></p>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>Нема изложби.</p>
+    {% endfor %}
+</div>
+{% endblock %}
